@@ -25,7 +25,9 @@ Every experiment follows the same loop: **question → hypothesis → experiment
 
 ---
 
-## Architecture
+## Architecture -> AWS & Loader Project
+
+System Design for Loader 
 
 ```mermaid
 flowchart LR
