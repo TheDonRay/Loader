@@ -1,19 +1,11 @@
 import express from 'express';
-const app = express() 
 
-app.use(express.json()); 
+const app = express();
 
-// import all routes here 
+app.use(express.json());
 
+app.get('/server', (req, res) => {
+  res.json({ status: 'ok' });
+});
 
-// instantiate server starter endpoint 
-app.get('/', () => { 
-    res.status(200).json({ 
-        Server: "Active"
-    }); 
-}); 
-
-// mount routes here 
-
-
-export default app; 
+export default app;
