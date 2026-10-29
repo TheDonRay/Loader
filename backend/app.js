@@ -1,4 +1,6 @@
 import express from 'express';
+import mongoose from 'mongoose';
+import productRoutes from './routes/product.routes.js';
 
 const app = express();
 
@@ -12,5 +14,7 @@ app.get('/health', (req, res) => {
     db: dbUp ? 'connected' : 'disconnected',
   });
 });
+
+app.use('/products', productRoutes);
 
 export default app;
